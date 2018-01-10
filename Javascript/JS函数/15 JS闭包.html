@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="x()">闭包</button>
+<div id="demo"></div>
+<hr>
+<button onclick="myFunction()">闭包2</button>
+<div id="demo1"></div>
+<script>
+    //变量生命周期问题
+    function add(){
+        var sum=0;
+        return function (){
+            sum+=1;
+            document.getElementById("demo").innerHTML=sum;
+        }
+    }
+    var x=add();
+
+
+    function  add1() {
+        var sum=0;
+        return function(){
+            return sum+=1;
+        }
+    }
+    var y=add1();
+    function myFunction(){
+        document.getElementById("demo1").innerHTML=y();
+    }
+    //闭包需要解决几个概念问题
+//    1、作用域概念
+//    2、return方法
+</script>
+</body>
+</html>
