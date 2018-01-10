@@ -1,1 +1,10 @@
+<html>
+<body>
+<div id="demo"></div>
+<script>
+    var myfunction=new Function("a","b","return a+b");
+    var x = myfunction(1,2);
 //    在文件中都不会显示出来.html
+</script>
+</body>
+</html>

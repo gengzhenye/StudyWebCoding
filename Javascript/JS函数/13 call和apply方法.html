@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="demo"></div>
+<div id="demo1"></div>
+<script>
+    <!--两者的第一个参数必须是对象-->
+    var myObj;
+    function myFunction(a,b) {
+        return a*b;
+    }
+    value=myFunction.call(myObj,10,2);
+    document.getElementById("demo").innerHTML=value;
+//    apply的第二个参数是数组
+    var myObj1,myArray;
+    function myFunction1(a,b) {
+        return a+b;
+    }
+    myArray=[10,2];
+    value1=myFunction1.apply(myObj1,myArray);
+    document.getElementById("demo1").innerHTML=value1;
+</script>
+</body>
+</html>

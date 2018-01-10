@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="demo"></div>
+<script>
+    function myFunction(abc,bbc){
+        this.firstName=abc;
+        this.lastName=bbc;
+    }
+    var value=new myFunction("aaa","bbb");//构造函数会创建一个新对象，新对象会继承构造函数的属性和方法
+    document.getElementById("demo").innerHTML=value.firstName;
+</script>
+</body>
+</html>

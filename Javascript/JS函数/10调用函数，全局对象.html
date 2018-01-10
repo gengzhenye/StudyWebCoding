@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        function myFunction(){
+            return this;//谁调用这个方法，这个方法就属于哪个对象
+        }
+        document.getElementById("demo").innerHTML=window.myFunction(10,2);
+    </script>
+</body>
+</html>

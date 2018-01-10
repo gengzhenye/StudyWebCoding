@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--在js中，变量声明咋方法或对象体内为局部变量，声明在体外为全局变量，PS如果体内变量不加var赋值，则同样为全局变量-->
+<button onclick="oneFunction()">全局变量</button>
+<div id="one"></div>
+<hr>
+<button onclick="twoFunction()">局部变量</button>
+<div id="two"></div>
+<hr>
+<button onclick="threeFunction()">全局变量的局限</button>
+<div id="three"></div>
+<hr>
+<button onclick="fourFunction()">解决全局变量不隐秘的困扰</button>
+<div id="four"></div>
+<hr>
+<button onclick="fiveFunction()">解决无法多次调用的困扰</button>
+<div id="five"></div>
+<script>
+    var sum=0;
+    function oneFunction() {
+        sum+=1;
+        document.getElementById("one").innerHTML=sum;
+    }
+
+    function  twoFunction() {
+        var sum2=0;
+        sum2+=1;
+        document.getElementById("two").innerHTML=sum2;
+    }
+
+    function  threeFunction() {
+        sum=sum+10;
+        document.getElementById("three").innerHTML=sum;
+    }
+    //内嵌函数--函数体都可以访问它们的上一层作用域
+    function  fourFunction() {
+        var sum4=0;
+        function infourFunction(){
+            sum4+=1;
+            document.getElementById("four").innerHTML=sum4;
+        }
+        infourFunction();
+    }
+</script>
+</body>
+</html>

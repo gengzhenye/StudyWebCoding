@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="demo"></div>
+<script>
+    <!--计算所有参数之和-->
+    function myFunction(){
+        var sum=0;//javascript是弱类型语言，此处需要定义整数
+        for(var i=0;i<arguments.length;i++){
+            sum+=arguments[i];
+        }
+        return sum;
+    }
+    document.getElementById("demo").innerHTML=myFunction(1,2,3,4);
+</script>
+</body>
+</html>

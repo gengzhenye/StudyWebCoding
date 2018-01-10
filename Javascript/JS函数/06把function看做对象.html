@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="demo"></div>
+<div id="demo1"></div>
+<script>
+    //  用arguments返回参数长度
+    function myFunction(a,b,c){
+        return arguments.length;
+    }
+    document.getElementById("demo").innerHTML=myFunction(4,3,2);
+
+    //  作为对象可以调用方法
+    function myFunction(a,b){
+        return a+b;
+    }
+    var x=myFunction(4,4);
+    document.getElementById("demo").innerHTML=x.toString();
+</script>
+</body>
+</html>
